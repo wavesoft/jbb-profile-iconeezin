@@ -1,0 +1,21 @@
+
+# Metadata
+@uuid: 2
+@revision: 0
+@require:
+    IconzeenAPI: iconeezin/api
+
+# Objects
+
+IconzeenAPI.AudioFile:
+    embed:
+        - url
+    properties:
+        - url
+
+IconzeenAPI.ExperimentFile:
+    embed:
+        - url
+    properties:
+        - url
+        - className

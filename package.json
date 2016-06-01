@@ -1,0 +1,30 @@
+{
+  "name": "jbb-profile-iconeezin",
+  "version": "0.1.0",
+  "description": "Iconeez.in JBB Profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavesoft/jbb-profile-iconeezin.git"
+  },
+  "keywords": [
+    "jbb",
+    "jbb-profile",
+    "iconeezin"
+  ],
+  "author": "Ioannis Charalampidis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wavesoft/jbb-profile-iconeezin/issues"
+  },
+  "homepage": "https://github.com/wavesoft/jbb-profile-iconeezin#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-header": "^1.8.2",
+    "gulp-jbb-profile": "^1.0.2",
+    "webpack-stream": "^3.2.0"
+  }
+}
