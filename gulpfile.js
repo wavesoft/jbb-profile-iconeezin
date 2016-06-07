@@ -18,8 +18,8 @@ gulp.task('dist/jbb-profile-iconeezin', ['generate'], function() {
 		    	filename: PROD ? 'jbb-profile-iconeezin.min.js' : 'jbb-profile-iconeezin.js',
 				// Export itself to a global var
 				libraryTarget: 'var',
-				// Name of the global var: 'Foo'
-				library: 'JBBProfileIconeezin'
+				// Name of the global var: 'JBB.Profile.Iconeezin'
+				library: [ 'JBB', 'Profile', 'iconeezin' ]
 			},
 			externals: {
 				'iconeezin/api': 'IconeezinAPI',
@@ -57,7 +57,7 @@ gulp.task('dist/jbb-profile-iconeezin-loader', ['generate'], function() {
 				// Export itself to a global var
 				libraryTarget: 'var',
 				// Name of the global var: 'Foo'
-				library: 'JBBProfileIconeezinLoader'
+				library: [ 'JBB', 'Loader', 'iconeezin' ]
 			},
 			externals: {
 				'iconeezin/api': 'IconeezinAPI',

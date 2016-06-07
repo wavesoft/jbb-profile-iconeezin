@@ -31,8 +31,14 @@ module.exports = {
 	/**
 	 * Initialize profile loader
 	 */
-	'initialize': function( cb ) {
+	'initialize': function( cb, specs ) {
+
+		// Keep bundle name from specs
+		this.name = specs['name'];
+
+		// Fire callback
 		if (cb) cb();
+
 	},
 
 	/**
@@ -44,7 +50,7 @@ module.exports = {
 		if (loadClass === "IconeezinAPI.ExperimentFile") {
 
 			if (typeof loadSpecs === "string") {
-				objects[name] = new IconeezinAPI.ExperimentFile( loadSpecs );
+				objects[name] = new IconeezinAPI.ExperimentFile( loadSpecs, this.name );
 				callback( null, objects );
 				return true;
 			}

@@ -6,10 +6,11 @@ var IconzeenAPI = require('iconeezin/api');
 var factory_IconzeenAPI_AudioFile = {
 	props: 1,
 	create: function() {
-		return new IconzeenAPI.AudioFile();
+		return Object.create(IconzeenAPI.AudioFile.prototype);
 	},
 	init: function(inst, props, pagesize, offset) {
-		inst.url = props[offset+pagesize*0];
+		IconzeenAPI.AudioFile.call(inst,
+			props[offset+pagesize*0]);
 	}
 }
 
@@ -19,11 +20,12 @@ var factory_IconzeenAPI_AudioFile = {
 var factory_IconzeenAPI_ExperimentFile = {
 	props: 2,
 	create: function() {
-		return new IconzeenAPI.ExperimentFile();
+		return Object.create(IconzeenAPI.ExperimentFile.prototype);
 	},
 	init: function(inst, props, pagesize, offset) {
-		inst.url = props[offset+pagesize*0];
-		inst.className = props[offset+pagesize*1];
+		IconzeenAPI.ExperimentFile.call(inst,
+			props[offset+pagesize*0],
+			props[offset+pagesize*1]);
 	}
 }
 

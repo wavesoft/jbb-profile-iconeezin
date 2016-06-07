@@ -8,12 +8,14 @@
 # Objects
 
 IconzeenAPI.AudioFile:
+    init: [ url ]
     embed:
         - url
     properties:
         - url
 
 IconzeenAPI.ExperimentFile:
+    init: [ url, className ]
     embed:
         - url
     properties:
