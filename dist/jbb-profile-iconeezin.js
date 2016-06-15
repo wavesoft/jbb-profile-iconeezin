@@ -1,5 +1,5 @@
 /* Iconeezin profile for JBB - https://github.com/wavesoft/jbb-profile-iconeezin */
-var JBBProfileIconeezin =
+var JBB = JBB || {}; JBB["Profile"] = JBB["Profile"] || {}; JBB["Profile"]["iconeezin"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -46,32 +46,32 @@ var JBBProfileIconeezin =
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var IconzeenAPI = __webpack_require__(1);
+	var Iconeezin = __webpack_require__(1);
 
 	/**
-	 * Factory & Initializer of IconzeenAPI.AudioFile
+	 * Factory & Initializer of Iconeezin.API.AudioFile
 	 */
-	var factory_IconzeenAPI_AudioFile = {
+	var factory_Iconeezin_API_AudioFile = {
 		props: 1,
 		create: function() {
-			return Object.create(IconzeenAPI.AudioFile.prototype);
+			return Object.create(Iconeezin.API.AudioFile.prototype);
 		},
 		init: function(inst, props, pagesize, offset) {
-			IconzeenAPI.AudioFile.call(inst,
+			Iconeezin.API.AudioFile.call(inst,
 				props[offset+pagesize*0]);
 		}
 	}
 
 	/**
-	 * Factory & Initializer of IconzeenAPI.ExperimentFile
+	 * Factory & Initializer of Iconeezin.API.ExperimentFile
 	 */
-	var factory_IconzeenAPI_ExperimentFile = {
+	var factory_Iconeezin_API_ExperimentFile = {
 		props: 2,
 		create: function() {
-			return Object.create(IconzeenAPI.ExperimentFile.prototype);
+			return Object.create(Iconeezin.API.ExperimentFile.prototype);
 		},
 		init: function(inst, props, pagesize, offset) {
-			IconzeenAPI.ExperimentFile.call(inst,
+			Iconeezin.API.ExperimentFile.call(inst,
 				props[offset+pagesize*0],
 				props[offset+pagesize*1]);
 		}
@@ -87,10 +87,10 @@ var JBBProfileIconeezin =
 				} else {
 					if (id < 33) {
 						if (id === 32)
-							return factory_IconzeenAPI_AudioFile;
+							return factory_Iconeezin_API_AudioFile;
 					} else {
 						if (id === 33)
-							return factory_IconzeenAPI_ExperimentFile;
+							return factory_Iconeezin_API_ExperimentFile;
 					}
 				}
 			}
@@ -101,7 +101,7 @@ var JBBProfileIconeezin =
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = IconeezinAPI;
+	module.exports = Iconeezin;
 
 /***/ }
 /******/ ]);

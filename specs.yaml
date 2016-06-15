@@ -2,19 +2,21 @@
 # Metadata
 @uuid: 2
 @revision: 0
-@require:
-    IconzeenAPI: iconeezin/api
+@require.encode:
+    Iconeezin.API: iconeezin/api
+@require.decode:
+    Iconeezin: iconeezin
 
 # Objects
 
-IconzeenAPI.AudioFile:
+Iconeezin.API.AudioFile:
     init: [ url ]
     embed:
         - url
     properties:
         - url
 
-IconzeenAPI.ExperimentFile:
+Iconeezin.API.ExperimentFile:
     init: [ url, className ]
     embed:
         - url

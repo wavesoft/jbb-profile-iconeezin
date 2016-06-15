@@ -1,18 +1,18 @@
 var BinaryEncoder = require('jbb/encoder');
-var IconzeenAPI = require('iconeezin/api');
+var Iconeezin = Iconeezin || {}; Iconeezin["API"] = require("iconeezin/api");
 
 /**
- * Property getter IconzeenAPI.AudioFile
+ * Property getter Iconeezin.API.AudioFile
  */
-function getter_IconzeenAPI_AudioFile(inst) {
+function getter_Iconeezin_API_AudioFile(inst) {
 	return [
 		new BinaryEncoder.FileResource( inst.url )];
 }
 
 /**
- * Property getter IconzeenAPI.ExperimentFile
+ * Property getter Iconeezin.API.ExperimentFile
  */
-function getter_IconzeenAPI_ExperimentFile(inst) {
+function getter_Iconeezin_API_ExperimentFile(inst) {
 	return [
 		new BinaryEncoder.FileResource( inst.url ),
 		inst.className];
@@ -24,10 +24,10 @@ module.exports = {
 	size: 2,
 	frequent: 0,
 	encode: function( inst ) {
-			if (inst instanceof IconzeenAPI.AudioFile) {
-				return [32, getter_IconzeenAPI_AudioFile];
-			} else if (inst instanceof IconzeenAPI.ExperimentFile) {
-				return [33, getter_IconzeenAPI_ExperimentFile];
+			if (inst instanceof Iconeezin.API.AudioFile) {
+				return [32, getter_Iconeezin_API_AudioFile];
+			} else if (inst instanceof Iconeezin.API.ExperimentFile) {
+				return [33, getter_Iconeezin_API_ExperimentFile];
 			}
 		}
 };

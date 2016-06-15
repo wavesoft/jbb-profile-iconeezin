@@ -22,7 +22,7 @@ gulp.task('dist/jbb-profile-iconeezin', ['generate'], function() {
 				library: [ 'JBB', 'Profile', 'iconeezin' ]
 			},
 			externals: {
-				'iconeezin/api': 'IconeezinAPI',
+				'iconeezin': 'Iconeezin',
 			},
 		    plugins: PROD ? [
 		    	new webpack.webpack.optimize.DedupePlugin(),
@@ -60,7 +60,7 @@ gulp.task('dist/jbb-profile-iconeezin-loader', ['generate'], function() {
 				library: [ 'JBB', 'Loader', 'iconeezin' ]
 			},
 			externals: {
-				'iconeezin/api': 'IconeezinAPI',
+				'iconeezin/api': 'Iconeezin.API',
 			},
 		    plugins: PROD ? [
 		    	new webpack.webpack.optimize.DedupePlugin(),

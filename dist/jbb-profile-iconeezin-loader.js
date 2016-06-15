@@ -1,5 +1,5 @@
 /* Iconeezin profile loader for JBB - https://github.com/wavesoft/jbb-profile-iconeezin */
-var JBBProfileIconeezinLoader =
+var JBB = JBB || {}; JBB["Loader"] = JBB["Loader"] || {}; JBB["Loader"]["iconeezin"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -79,8 +79,14 @@ var JBBProfileIconeezinLoader =
 		/**
 		 * Initialize profile loader
 		 */
-		'initialize': function( cb ) {
+		'initialize': function( cb, specs ) {
+
+			// Keep bundle name from specs
+			this.name = specs['name'];
+
+			// Fire callback
 			if (cb) cb();
+
 		},
 
 		/**
@@ -92,7 +98,7 @@ var JBBProfileIconeezinLoader =
 			if (loadClass === "IconeezinAPI.ExperimentFile") {
 
 				if (typeof loadSpecs === "string") {
-					objects[name] = new IconeezinAPI.ExperimentFile( loadSpecs );
+					objects[name] = new IconeezinAPI.ExperimentFile( loadSpecs, this.name );
 					callback( null, objects );
 					return true;
 				}
@@ -448,7 +454,7 @@ var JBBProfileIconeezinLoader =
 /* 3 */
 /***/ function(module, exports) {
 
-	module.exports = IconeezinAPI;
+	module.exports = Iconeezin.API;
 
 /***/ }
 /******/ ]);
